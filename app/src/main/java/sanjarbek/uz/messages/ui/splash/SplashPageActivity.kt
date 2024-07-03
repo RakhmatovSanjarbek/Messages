@@ -7,8 +7,7 @@ import com.google.firebase.auth.auth
 import sanjarbek.uz.messages.MassageApplication
 import sanjarbek.uz.messages.core.base_activity.BaseActivity
 import sanjarbek.uz.messages.databinding.ActivitySplashPageBinding
-import sanjarbek.uz.messages.ui.MainActivity
-import sanjarbek.uz.messages.ui.auth.sign_in.SingInActivity
+import sanjarbek.uz.messages.ui.pin.PinPageActivity
 import sanjarbek.uz.messages.ui.start.StartPageActivity
 
 @Suppress("DEPRECATION")
@@ -48,7 +47,7 @@ class SplashPageActivity : BaseActivity<ActivitySplashPageBinding>() {
                     startActivity(intent)
                 }else{
                     val intent = Intent(
-                        this, MainActivity::class.java
+                        this, PinPageActivity::class.java
                     )
                     intent.addFlags(
                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
