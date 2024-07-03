@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="sanjarbek.uz.messages.ui.chats.ChatsPageFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_navigation_home_to_sendMessageFragment"
+            app:destination="@id/sendMessageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="sanjarbek.uz.messages.ui.profile.ProfilePageFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/sendMessageFragment"
+        android:name="sanjarbek.uz.messages.ui.send_message.SendMessageFragment"
+        android:label="fragment_send_message"
+        tools:layout="@layout/fragment_send_message" >
+        <action
+            android:id="@+id/action_sendMessageFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/navigation_home"/>
+    </fragment>
+</navigation>
